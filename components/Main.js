@@ -1,16 +1,33 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
-import styles from '../StyleSheet';
+import { connect } from 'react-redux';
+import { Platform, Text, View } from 'react-native';
+import { fetchMasteries } from '../redux/masteries';
+import LandingPage from './LandingPage';
+import Dominance from './Dominance';
+import { Router, Scene } from 'react-native-router-flux';
 
-export default class Main extends Component {
+class Main extends Component {
+  componentDidMount() {
+    this.props.initialData();
+  }
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Masteries</Text>
-        <Button onPress={Actions.Dominance}>Dominance</Button>
-      </View>
-    )
+      <Router>
+        <Scene key="root">
+          <Scene key="LandingPage" component={ LandingPage } title="LoLRunedMyLife"/>
+          <Scene key="Dominance" component={ Dominance } title="Dominance"/>
+        </Scene>
+      </Router>
+    );
   }
 }
+
+const mapProps = null;
+
+const mapDispatchtoProps = dispatch => ({
+  initialData: () => {
+    dispatch(fetchMasteries());
+  },
+});
+
+export default connect(mapProps, mapDispatchtoProps)(Main);
