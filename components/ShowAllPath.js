@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {
-    Platform,
-    Text,
-    View
+  Platform,
+  Text,
+  View
 } from 'react-native';
 import { Router, Scene } from 'react-native-router-flux';
 import Main from './Main';
