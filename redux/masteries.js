@@ -13,9 +13,8 @@ export default function (state = [], action) {
   }
 }
 
-export const fetchMasteries = () =>
-  dispatch =>
-    axios.get('http://ddragon.leagueoflegends.com/cdn/7.22.1/data/en_US/mastery.json')
-      .then(res =>
-        dispatch(getMasteries(res.data)))
-      .catch(err => console.log(err));
+export const fetchMasteries = () => (dispatch) => {
+  axios.get('http://ddragon.leagueoflegends.com/cdn/7.22.1/data/en_US/mastery.json')
+    .then(res => dispatch(getMasteries(res.data)))
+    .catch(err => console.log(err));
+};
