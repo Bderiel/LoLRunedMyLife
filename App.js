@@ -5,12 +5,16 @@ import {
   Text,
   View
 } from 'react-native';
-import ShowAllPath from './components/ShowAllPath';
+import Main from './components/Main';
+import { Provider } from 'react-redux';
+import store from './redux';
 
 export default class App extends Component {
   render() {
     return (
-      <ShowAllPath />
+      <Provider store={ store }>
+        <Main />
+      </Provider>
     );
   }
 }
