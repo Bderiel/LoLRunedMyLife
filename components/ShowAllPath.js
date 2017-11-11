@@ -4,17 +4,21 @@ import {
     Text,
     View
 } from 'react-native';
-import styles from '../StyleSheet';
+import { Router, Scene } from 'react-native-router-flux';
+import Main from './Main';
+import Dominance from './Dominance';
+import Sorcery from './Sorcery';
 
-export default class ShowAllPath extends Component<{}> {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.header}>
-                    Masteries
-                </Text>
-            </View>
-        );
-    }
+export default class ShowAllPath extends Component {
+  render() {
+    return (
+      <Router>
+        <Scene key="root">
+          <Scene key="Main" component={ Main } title="Main"/>
+          <Scene key="Dominance" component={ Dominance } title="Dominance"/>
+          <Scene key="Sorcery" component={ Sorcery } title="Sorcery"/>
+        </Scene>
+      </Router>
+    );
+  }
 }
-
