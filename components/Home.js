@@ -3,19 +3,18 @@ import { connect } from 'react-redux';
 import { Platform, Text, View } from 'react-native';
 
 import ShowAllPath from './ShowAllPath';
-import { fetchMastries } from '../redux/masteries';
+import { fetchMasteries } from '../redux/masteries';
 
 
 class Home extends Component {
   componentDidMount() {
-    //this.props.initialData();
-    console.log('123')
+    this.props.initialData();
   }
   render() {
     return (
 
       <Text>
-              Hello
+        Hello
           </Text>
     );
   }
@@ -24,11 +23,10 @@ class Home extends Component {
 
 const mapProps = null;
 
-// const mapDispatchtoProps = dispatch => ({
-//   initialData: () => {
-//     dispatch(fetchMastries());
-//   },
-const mapDispatchtoProps = null
-// });
+const mapDispatchtoProps = dispatch => ({
+  initialData: () => {
+    dispatch(fetchMasteries());
+  },
+});
 
 export default connect(mapProps, mapDispatchtoProps)(Home);
