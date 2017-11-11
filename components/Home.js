@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Platform, Text, View } from 'react-native';
 
-import ShowAllPath from './ShowAllPath';
+import  ShowAllPath  from './ShowAllPath';
 import { fetchMasteries } from '../redux/masteries';
 
 
@@ -12,10 +12,7 @@ class Home extends Component {
   }
   render() {
     return (
-
-      <Text>
-        Hello
-          </Text>
+      <ShowAllPath/>
     );
   }
 }
