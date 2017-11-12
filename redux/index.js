@@ -3,10 +3,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import masteries from './masteries';
+import champions from './champions';
 
 
 const reducer = combineReducers({
-  masteries,
+  masteries, champions,
 });
 
 const middleware = composeWithDevTools(applyMiddleware(
