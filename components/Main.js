@@ -9,8 +9,8 @@ import SingleChamp from './SingleChamp'
 import { Router, Scene } from 'react-native-router-flux';
 
 class Main extends Component {
-  componentDidMount() {
-    this.props.initialData();
+  componentDidMount(props) {
+    this.props.initialData(props);
   }
   render() {
     return (
@@ -18,7 +18,7 @@ class Main extends Component {
         <Scene key="root">
           <Scene key="LandingPage" component={LandingPage} title="LoLRunedMyLife" />
           <Scene key="Dominance" component={Dominance} title="Dominance" />
-          <Scene key="SingleChamp" component={SingleChamp} title="SingleChamp" />
+          <Scene key="SingleChamp" component={SingleChamp}/>
 
         </Scene>
       </Router>

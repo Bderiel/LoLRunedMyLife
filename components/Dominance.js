@@ -15,7 +15,7 @@ class Dominance extends Component {
       <ScrollView >
         {arr.map(char => (
           <View key={char.id} style={styles.squares}>
-            <Button onPress={() => { Actions.SingleChamp({ chamId: char.id, champ:char }) }}>
+            <Button onPress={() => { Actions.SingleChamp({ chamId: char.id, champ:char, title:char.id }) }}>
               <Text>{char.id}</Text>
               <Image
                 style={{ width: 50, height: 50 }}
