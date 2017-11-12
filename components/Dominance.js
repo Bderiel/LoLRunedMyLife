@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
-// import Button from 'react-native-button';
+import styles from '../StyleSheet';
+import Button from 'react-native-button';
+import { Actions } from 'react-native-router-flux';
 // import { Actions } from 'react-native-router-flux';
 
 class Dominance extends Component {
@@ -9,28 +11,38 @@ class Dominance extends Component {
     const champs = this.props.champions.data;
     const keys = Object.keys(champs);
     const arr = keys.map(character => champs[character]);
-    console.log(arr);
     return (
-    <View>
-      {arr.map(char=>{
-        return(
-          <View>
-          <Text key={char.id}>{char.id}</Text>
-          <Image
-            style={{ width: 50, height: 50 }}
-              source={{ uri: 'http://pluspng.com/img-png/league-of-legends-png-league-of-legends-png-image-png-image-200.png' }}
-          />
+      <ScrollView >
+        {arr.map(char => (
+          <View key={char.id} style={styles.squares}>
+            <Button onPress={() => { Actions.SingleChamp({ chamId: char.id, champ:char, title:char.id }) }}>
+              <Text>{char.id}</Text>
+              <Image
+                style={{ width: 50, height: 50 }}
+                source={{
+                uri: `http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/${char.id}.png 
+`,
+}}
+              />
+            </Button>
           </View>
-        )
-      })}
-    </View>
-    )
+        ))}
+      </ScrollView>
+    );
   }
 }
 
+//<Button onPress={Actions.Dominance}>Dominance</Button>;
+
 const mapProps = state => ({
- masteries: state.masteries,
+  masteries: state.masteries,
   champions: state.champions,
 });
 
 export default connect(mapProps, {})(Dominance);
+
+// <Button onPress={Actions.Dominance}>Dominance</Button>;
+
+// <Button onPress={() => { Actions.SingleChamp({ chamId: char.id, champ:char }) }}>
+
+//<Button onPress={Actions.SingleChamp}>
