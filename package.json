@@ -8,6 +8,14 @@
 	},
 	"dependencies": {
 		"axios": "^0.17.0",
+		"body-parser": "^1.16.1",
+		"compression": "^1.7.1",
+		"connect-session-sequelize": "^4.1.0",
+		"express": "^4.14.1",
+		"express-session": "^1.15.1",
+		"morgan": "^1.8.1",
+		"pg": "^6.1.2",
+		"pg-hstore": "^2.3.2",
 		"react": "16.0.0",
 		"react-native": "0.50.3",
 		"react-native-button": "^2.1.0",
@@ -17,12 +25,14 @@
 		"redux": "^3.7.2",
 		"redux-devtools-extension": "^2.13.2",
 		"redux-logger": "^3.0.6",
-		"redux-thunk": "^2.2.0"
+		"redux-thunk": "^2.2.0",
+		"sequelize": "^4.3.1"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",
 		"babel-preset-react-native": "4.0.0",
 		"jest": "21.2.1",
+		"nodemon": "^1.12.1",
 		"react-test-renderer": "16.0.0"
 	},
 	"jest": {
