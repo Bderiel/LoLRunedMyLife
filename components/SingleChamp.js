@@ -17,10 +17,14 @@ export default class SingleChamp extends Component {
           <Text>{champ.id}</Text>
           <Text>{champ.title}</Text>
           <Text>{champ.blurb}</Text>
-          <Text></Text>
+            <Image
+                style={{ width: 200, height: 200 }}
+                source={{
+                    uri: `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ.id}_0.jpg
+`,
+                }}/>
       </View>
     );
   }
 }
 
-// export default connect({}, {})(SingleChamp);
