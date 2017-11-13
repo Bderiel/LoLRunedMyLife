@@ -8,11 +8,12 @@ export default class LandingPage extends Component {
   render() {
     const remote = 'https://news-a.akamaihd.net/public/images/misc/GameBox.jpg'
     return (
-        <ImageBackground source={{ uri: remote }} style={ styles.backgroundImage }>
-          <Text>Masteries</Text>
-          <Button onPress={Actions.Dominance}>Dominance</Button>
-        <Button onPress={Actions.Masteries}>Masteries</Button>
-        </ImageBackground>
+      <ImageBackground source={{ uri: remote }} style={ styles.backgroundImage }>
+        <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', padding: 150}}>
+          <Button style={ styles.button } onPress={Actions.AllChampions}>All Champions</Button>
+          <Button style={ styles.button } onPress={Actions.Masteries}>LoL Runes Runed My Life</Button>
+        </View>
+      </ImageBackground>
     )
   }
 }
