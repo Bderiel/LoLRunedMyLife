@@ -21,7 +21,7 @@ class Main extends Component {
           <Scene key="LandingPage" component={LandingPage} title="        League Of Legends Runed My Life" />
           <Scene key="AllChampions" component={AllChampions} title="All Champions" />
           <Scene key="SingleChamp" component={SingleChamp}/> 
-          <Scene key="Masteries" component={Masteries} /> 
+          <Scene key="Masteries" component={Masteries} title="Mastery Trees"/> 
           </Scene>
       </Router>
     );
