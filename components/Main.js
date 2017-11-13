@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Platform, Text, View } from 'react-native';
+import { Router, Scene } from 'react-native-router-flux';
 import { fetchMasteries } from '../redux/masteries';
 import { fetchChampions } from '../redux/champions';
 import LandingPage from './LandingPage';
 import AllChampions from './AllChampions';
 import SingleChamp from './SingleChamp';
 import Masteries from './Masteries';
+import SingleMastery from './SingleMastery';
 import styles from '../StyleSheet';
-import { Router, Scene } from 'react-native-router-flux';
 
 class Main extends Component {
   componentDidMount(props) {
@@ -20,9 +20,10 @@ class Main extends Component {
         <Scene key="root">
           <Scene key="LandingPage" component={LandingPage} title="        League Of Legends Runed My Life" />
           <Scene key="AllChampions" component={AllChampions} title="All Champions" />
-          <Scene key="SingleChamp" component={SingleChamp}/> 
-          <Scene key="Masteries" component={Masteries} title="Mastery Trees"/> 
-          </Scene>
+          <Scene key="SingleChamp" component={SingleChamp} />
+          <Scene key="Masteries" component={Masteries} title ='Mastery Trees' />
+          <Scene key="SingleMastery" component={SingleMastery} />
+        </Scene>
       </Router>
     );
   }
