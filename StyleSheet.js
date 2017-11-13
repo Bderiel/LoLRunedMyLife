@@ -4,7 +4,11 @@ module.exports = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'black',
+  },
+  backgroundImage: {
+    flex: 1,
+    width: undefined,
+    height: undefined,
   },
   header: {
     fontSize: 30,
