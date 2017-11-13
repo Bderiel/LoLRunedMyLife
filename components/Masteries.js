@@ -7,22 +7,72 @@ import styles from '../StyleSheet';
 
 class Masteries extends Component {
     render() {
-        const masteries = this.props.masteries;
-        console.log(masteries[0].image.slice(1),'~~~')
+        const toFilter = this.props.masteries;
+        const Precision = toFilter.filter(cat => cat.category.name ==='Precision');
+        const Domination = toFilter.filter(cat => cat.category.name === 'Domination');
+        const Sorcery = toFilter.filter(cat => cat.category.name === 'Sorcery');
+        const Resolve = toFilter.filter(cat => cat.category.name === 'Resolve');
+        const Inspiration = toFilter.filter(cat => cat.category.name === 'Inspiration');
         return (
             <ScrollView >
-                {masteries.map(char => (
-                    <View key={char.id} style={styles.squares}>
+                    <View>
                         <Button onPress={() => { Actions.SingleChamp({}) }}>
-                            <Text>{char.name}</Text>
+                        <Text style={styles.header}>{Precision[0].category.name.toUpperCase()}</Text>
                             <Image
-                                style={{ width: 50, height: 50 }}
+                                style={{ width: 250, height: 250 }}
                                 source={
-                                    require(`../public/images/domination/8128.png`)
+                                    require(`../public/images/precision/precisionicon.png`)
                                 } />
                         </Button>
+                    <Text>{Precision[0].category.description}</Text>
                     </View>
-                ))}
+                <View>
+                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                        <Text style={styles.header}>{Domination[0].category.name.toUpperCase()}</Text>
+                        <Image
+                            style={{ width: 250, height: 250 }}
+                            source={
+                                require(`../public/images/domination/dominationicon.png`)
+                            } />
+                    </Button>
+                    <Text>{Domination[0].category.description}</Text>
+                </View>
+
+                <View>
+                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                        <Text style={styles.header}>{Sorcery[0].category.name.toUpperCase()}</Text>
+                        <Image
+                            style={{ width: 250, height: 250 }}
+                            source={
+                                require(`../public/images/sorcery/sorceryicon.png`)
+                            } />
+                    </Button>
+                    <Text>{Sorcery[0].category.description}</Text>
+                </View>
+
+                <View>
+                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                        <Text style={styles.header}>{Resolve[0].category.name.toUpperCase()}</Text>
+                        <Image
+                            style={{ width: 250, height: 250 }}
+                            source={
+                                require(`../public/images/resolve/resolveicon.png`)
+                            } />
+                    </Button>
+                    <Text>{Resolve[0].category.description}</Text>
+                </View>
+
+                <View>
+                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                        <Text style={styles.header}>{Inspiration[0].category.name.toUpperCase()}</Text>
+                        <Image
+                            style={{ width: 250, height: 250 }}
+                            source={
+                                require(`../public/images/inspiration/inspirationicon.png`)
+                            } />
+                    </Button>
+                    <Text>{Inspiration[0].category.description}</Text>
+                </View>
             </ScrollView>
         );
     }
@@ -36,3 +86,7 @@ export default connect(mapProps, {})(Masteries);
 
 
 //require(`../public/images${char.image.slice(1)}`)
+
+//Precision[0].category.name
+//require(`../public/images${Precision[0].category.image.slice(1)}`)
+
