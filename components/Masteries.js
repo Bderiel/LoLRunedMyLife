@@ -8,6 +8,7 @@ import styles from '../StyleSheet';
 class Masteries extends Component {
     render() {
         const masteries = this.props.masteries;
+        console.log(masteries[0].image.slice(1),'~~~')
         return (
             <ScrollView >
                 {masteries.map(char => (
@@ -16,9 +17,9 @@ class Masteries extends Component {
                             <Text>{char.name}</Text>
                             <Image
                                 style={{ width: 50, height: 50 }}
-                                source={{
-                                    uri: char.image
-                                }} />
+                                source={
+                                    require(`../public/images/domination/8128.png`)
+                                } />
                         </Button>
                     </View>
                 ))}
@@ -32,3 +33,6 @@ const mapProps = state => ({
 });
 
 export default connect(mapProps, {})(Masteries);
+
+
+//require(`../public/images${char.image.slice(1)}`)
