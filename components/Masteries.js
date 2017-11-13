@@ -14,66 +14,60 @@ class Masteries extends Component {
         const Resolve = toFilter.filter(cat => cat.category.name === 'Resolve');
         const Inspiration = toFilter.filter(cat => cat.category.name === 'Inspiration');
         return (
-            <ScrollView >
-                    <View>
-                        <Button onPress={() => { Actions.SingleChamp({}) }}>
-                        <Text style={styles.header}>{Precision[0].category.name.toUpperCase()}</Text>
-                            <Image
-                                style={{ width: 250, height: 250 }}
-                                source={
-                                    require(`../public/images/precision/precisionicon.png`)
-                                } />
-                        </Button>
+        <ScrollView >
+          <View style={{ flex: 1, flexWrap: 'wrap', alignItems: 'center',}}>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleChamp({}) }}>
+                <View style={{ flexDirection: 'column' }}>
+                    <Text>{Precision[0].category.name.toUpperCase()}</Text>
                     <Text>{Precision[0].category.description}</Text>
+                </View>
+                <Image style={{ width: 150, height: 150 }} source={require(`../public/images/precision/precisionicon.png`)}/>
+                </Button>
+            </View>
+
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <View style={{ flexDirection: 'column' }}>
+                        <Text>{Domination[0].category.name.toUpperCase()}</Text>
+                        <Text>{Domination[0].category.description}</Text>
                     </View>
-                <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
-                        <Text style={styles.header}>{Domination[0].category.name.toUpperCase()}</Text>
-                        <Image
-                            style={{ width: 250, height: 250 }}
-                            source={
-                                require(`../public/images/domination/dominationicon.png`)
-                            } />
-                    </Button>
-                    <Text>{Domination[0].category.description}</Text>
-                </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/domination/dominationicon.png`)}/>
+                </Button>
+            </View>
 
-                <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
-                        <Text style={styles.header}>{Sorcery[0].category.name.toUpperCase()}</Text>
-                        <Image
-                            style={{ width: 250, height: 250 }}
-                            source={
-                                require(`../public/images/sorcery/sorceryicon.png`)
-                            } />
-                    </Button>
-                    <Text>{Sorcery[0].category.description}</Text>
-                </View>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <View style={{ flexDirection: 'column' }}>
+                        <Text>{Sorcery[0].category.name.toUpperCase()}</Text>
+                        <Text>{Sorcery[0].category.description}</Text>
+                    </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/sorcery/sorceryicon.png`)}/>
+                </Button>
+            </View>
 
-                <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
-                        <Text style={styles.header}>{Resolve[0].category.name.toUpperCase()}</Text>
-                        <Image
-                            style={{ width: 250, height: 250 }}
-                            source={
-                                require(`../public/images/resolve/resolveicon.png`)
-                            } />
-                    </Button>
-                    <Text>{Resolve[0].category.description}</Text>
-                </View>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <View style={{ flexDirection: 'column', flexWrap: 'wrap'  }}>
+                        <Text>{Resolve[0].category.name.toUpperCase()}</Text>
+                        <Text>{Resolve[0].category.description}</Text>
+                    </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/resolve/resolveicon.png`)}/>
+                </Button>
+                <Text>{Resolve[0].category.description}</Text>
+            </View>
 
-                <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
-                        <Text style={styles.header}>{Inspiration[0].category.name.toUpperCase()}</Text>
-                        <Image
-                            style={{ width: 250, height: 250 }}
-                            source={
-                                require(`../public/images/inspiration/inspirationicon.png`)
-                            } />
-                    </Button>
-                    <Text>{Inspiration[0].category.description}</Text>
-                </View>
-            </ScrollView>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <View style={{ flexDirection: 'column', flexWrap: 'wrap'  }}>
+                        <Text>{Inspiration[0].category.name.toUpperCase()}</Text>
+                        <Text>{Inspiration[0].category.description}</Text>
+                    </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/inspiration/inspirationicon.png`)}/>
+                </Button>
+            </View>
+          </View>
+        </ScrollView>
         );
     }
 }
