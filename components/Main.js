@@ -5,7 +5,8 @@ import { fetchMasteries } from '../redux/masteries';
 import { fetchChampions } from '../redux/champions';
 import LandingPage from './LandingPage';
 import Dominance from './Dominance';
-import SingleChamp from './SingleChamp'
+import SingleChamp from './SingleChamp';
+import Masteries from './Masteries';
 import { Router, Scene } from 'react-native-router-flux';
 
 class Main extends Component {
@@ -18,9 +19,9 @@ class Main extends Component {
         <Scene key="root">
           <Scene key="LandingPage" component={LandingPage} title="LoLRunedMyLife" />
           <Scene key="Dominance" component={Dominance} title="Dominance" />
-          <Scene key="SingleChamp" component={SingleChamp}/>
-
-        </Scene>
+          <Scene key="SingleChamp" component={SingleChamp}/> 
+          <Scene key="Masteries" component={Masteries} /> 
+          </Scene>
       </Router>
     );
   }
