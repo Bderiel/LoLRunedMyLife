@@ -11,6 +11,7 @@ export default class LandingPage extends Component {
         <ImageBackground source={{ uri: remote }} style={ styles.backgroundImage }>
           <Text>Masteries</Text>
           <Button onPress={Actions.Dominance}>Dominance</Button>
+        <Button onPress={Actions.Masteries}>Masteries</Button>
         </ImageBackground>
     )
   }

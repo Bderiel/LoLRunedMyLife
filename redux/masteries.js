@@ -14,7 +14,7 @@ export default function (state = [], action) {
 }
 
 export const fetchMasteries = () => (dispatch) => {
-  axios.get('http://192.168.1.253:8000/api/masteries')
+  axios.get('http://172.16.27.40:8000/api/masteries')
     .then(res => dispatch(getMasteries(res.data)))
     .catch(err => console.log(err));
 };
