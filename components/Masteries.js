@@ -17,7 +17,7 @@ class Masteries extends Component {
         <ScrollView >
           <View style={{ flex: 1, flexWrap: 'wrap', alignItems: 'center',}}>
             <View style={{ flexDirection:'row'}}>
-                        <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase()}) }}>
+                        <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase(), passed: Precision}) }}>
                 <View style={{ flexDirection: 'column' }}>
                     <Text>{Precision[0].category.name.toUpperCase()}</Text>
                     <Text>{Precision[0].category.description}</Text>
@@ -27,7 +27,7 @@ class Masteries extends Component {
             </View>
 
             <View style={{ flexDirection:'row'}}>
-                        <Button onPress={() => { Actions.SingleMastery({ title: Domination[0].category.name.toUpperCase()}) }}>
+                        <Button onPress={() => { Actions.SingleMastery({ title: Domination[0].category.name.toUpperCase(), passed: Domination}) }}>
                     <View style={{ flexDirection: 'column' }}>
                         <Text>{Domination[0].category.name.toUpperCase()}</Text>
                         <Text>{Domination[0].category.description}</Text>
@@ -37,7 +37,7 @@ class Masteries extends Component {
             </View>
 
             <View style={{ flexDirection:'row'}}>
-                        <Button onPress={() => { Actions.SingleMastery({ title: Sorcery[0].category.name.toUpperCase()}) }}>
+                        <Button onPress={() => { Actions.SingleMastery({ title: Sorcery[0].category.name.toUpperCase(), passed: Sorcery}) }}>
                     <View style={{ flexDirection: 'column' }}>
                         <Text>{Sorcery[0].category.name.toUpperCase()}</Text>
                         <Text>{Sorcery[0].category.description}</Text>
@@ -47,7 +47,7 @@ class Masteries extends Component {
             </View>
 
             <View style={{ flexDirection:'row'}}>
-                        <Button onPress={() => { Actions.SingleMastery({ title: Resolve[0].category.name.toUpperCase()}) }}>
+                        <Button onPress={() => { Actions.SingleMastery({ title: Resolve[0].category.name.toUpperCase(), passed: Resolve}) }}>
                     <View style={{ flexDirection: 'column', flexWrap: 'wrap'  }}>
                         <Text>{Resolve[0].category.name.toUpperCase()}</Text>
                         <Text>{Resolve[0].category.description}</Text>
@@ -58,7 +58,7 @@ class Masteries extends Component {
             </View>
 
             <View style={{ flexDirection:'row'}}>
-                        <Button onPress={() => { Actions.SingleMastery({ title: Inspiration[0].category.name.toUpperCase()}) }}>
+                        <Button onPress={() => { Actions.SingleMastery({ title: Inspiration[0].category.name.toUpperCase(), passed: Inspiration}) }}>
                     <View style={{ flexDirection: 'column', flexWrap: 'wrap'  }}>
                         <Text>{Inspiration[0].category.name.toUpperCase()}</Text>
                         <Text>{Inspiration[0].category.description}</Text>
