@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, Image, ScrollView } from 'react-native';
-import { connect } from 'react-redux';
+import { Text, View, Image } from 'react-native';
 import styles from '../StyleSheet';
-import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
 
 
 export default class SingleChamp extends Component {
