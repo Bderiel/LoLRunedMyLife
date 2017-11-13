@@ -17,7 +17,7 @@ class AllChampions extends Component {
             <View key={char.id} style={{ padding: 10, alignItems: 'center' }}>
               <Button onPress={() => { Actions.SingleChamp({ chamId: char.id, champ:char, title:char.id }) }}>
                 <Image
-                  style={{ width: 75, height: 75, borderRadius: 50, }}
+                  style={{ width: 75, height: 75, borderRadius: 50 }}
                   source={{
                   uri: `http://ddragon.leagueoflegends.com/cdn/7.22.1/img/champion/${char.id}.png`
                 }}/>
