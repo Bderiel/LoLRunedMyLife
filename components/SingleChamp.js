@@ -11,14 +11,14 @@ export default class SingleChamp extends Component {
     const champ = this.props.champ;
     return (
       <View style={ styles.singleChampion }>
-        <View style={{ alignItems: 'center', margin: 10 }}>
+        <View style={{ alignItems: 'center', margin: 20 }}>
           <Text style={{color: 'red', fontSize: 20 }}>{champ.id}</Text>
 
           <Text style={{color: 'white', fontSize: 16}}>{champ.title.slice(3)}</Text>
 
-          <Image style={{ width: 250, height: 250 }} source={{uri: `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ.id}_0.jpg`}} />
+          <Image style={{ width: 390, height: 375}} source={{uri: `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ.id}_0.jpg`}} />
 
-          <Text style={{color: 'grey'}}>{champ.blurb}</Text>
+          <Text style={{color: 'grey', textAlign: 'center'}}>{champ.blurb}</Text>
         </View>
       </View>
     );
