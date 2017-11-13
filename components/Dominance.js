@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import styles from '../StyleSheet';
 import Button from 'react-native-button';
 import { Actions } from 'react-native-router-flux';
-// import { Actions } from 'react-native-router-flux';
 
 class Dominance extends Component {
   render() {
@@ -20,9 +19,9 @@ class Dominance extends Component {
               <Image
                 style={{ width: 50, height: 50 }}
                 source={{
-                  uri: `http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/${char.id}.png`,
-                }}
-              />
+                uri: `http://ddragon.leagueoflegends.com/cdn/7.22.1/img/champion/${char.id}.png 
+`
+}}/>
             </Button>
           </View>
         ))}
@@ -31,17 +30,9 @@ class Dominance extends Component {
   }
 }
 
-//<Button onPress={Actions.Dominance}>Dominance</Button>;
-
 const mapProps = state => ({
   masteries: state.masteries,
   champions: state.champions,
 });
 
 export default connect(mapProps, {})(Dominance);
-
-// <Button onPress={Actions.Dominance}>Dominance</Button>;
-
-// <Button onPress={() => { Actions.SingleChamp({ chamId: char.id, champ:char }) }}>
-
-//<Button onPress={Actions.SingleChamp}>
