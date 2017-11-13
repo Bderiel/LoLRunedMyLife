@@ -16,7 +16,7 @@ class Masteries extends Component {
         return (
             <ScrollView >
                     <View>
-                        <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase()}) }}>
                         <Text style={styles.header}>{Precision[0].category.name.toUpperCase()}</Text>
                             <Image
                                 style={{ width: 250, height: 250 }}
@@ -27,7 +27,7 @@ class Masteries extends Component {
                     <Text>{Precision[0].category.description}</Text>
                     </View>
                 <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <Button onPress={() => { Actions.SingleMastery({title: Domination[0].category.name.toUpperCase()}) }}>
                         <Text style={styles.header}>{Domination[0].category.name.toUpperCase()}</Text>
                         <Image
                             style={{ width: 250, height: 250 }}
@@ -39,7 +39,7 @@ class Masteries extends Component {
                 </View>
 
                 <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <Button onPress={() => { Actions.SingleMastery({ title: Sorcery[0].category.name.toUpperCase()}) }}>
                         <Text style={styles.header}>{Sorcery[0].category.name.toUpperCase()}</Text>
                         <Image
                             style={{ width: 250, height: 250 }}
@@ -51,7 +51,7 @@ class Masteries extends Component {
                 </View>
 
                 <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <Button onPress={() => { Actions.SingleMastery({}) }}>
                         <Text style={styles.header}>{Resolve[0].category.name.toUpperCase()}</Text>
                         <Image
                             style={{ width: 250, height: 250 }}
@@ -63,7 +63,7 @@ class Masteries extends Component {
                 </View>
 
                 <View>
-                    <Button onPress={() => { Actions.SingleChamp({}) }}>
+                    <Button onPress={() => { Actions.SingleMastery({}) }}>
                         <Text style={styles.header}>{Inspiration[0].category.name.toUpperCase()}</Text>
                         <Image
                             style={{ width: 250, height: 250 }}
