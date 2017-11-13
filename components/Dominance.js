@@ -19,9 +19,15 @@ class Dominance extends Component {
               <Image
                 style={{ width: 50, height: 50 }}
                 source={{
+<<<<<<< HEAD
                 uri: `http://ddragon.leagueoflegends.com/cdn/7.22.1/img/champion/${char.id}.png 
 `
 }}/>
+=======
+                  uri: `http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/${char.id}.png`,
+                }}
+              />
+>>>>>>> master
             </Button>
           </View>
         ))}
