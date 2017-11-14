@@ -7,25 +7,25 @@ module.exports = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'black',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   singleChampion: {
     flex: 1,
     backgroundColor: 'black',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   backgroundImage: {
     flex: 1,
     width: undefined,
     height: undefined,
   },
-  button : { 
-    padding:10, 
-    height:45, 
-    width: 250, 
-    overflow:'hidden', 
-    borderRadius:4, 
-    backgroundColor: 'black'
+  button: {
+    padding: 10,
+    height: 45,
+    width: 250,
+    overflow: 'hidden',
+    borderRadius: 4,
+    backgroundColor: 'black',
   },
   container: {
     flex: 1,
@@ -38,18 +38,18 @@ module.exports = StyleSheet.create({
     color: 'red',
   },
   squares: {
-    flex: 1
+    flex: 1,
   },
   navBar: {
-    backgroundColor:'#0D47A1',
+    backgroundColor: '#0D47A1',
   },
-  navBarTitle:{
-      color:'white'
+  navBarTitle: {
+    color: 'white',
   },
-  barButtonTextStyle:{
-      color:'#FFFFFF'
+  barButtonTextStyle: {
+    color: '#FFFFFF',
   },
-  barButtonIconStyle:{
-      tintColor:'rgb(255,255,255)'
+  barButtonIconStyle: {
+    tintColor: 'rgb(255,255,255)',
   },
 });
