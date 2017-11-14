@@ -17,7 +17,6 @@ class Masteries extends Component {
         <ScrollView >
           <View style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
             <View style={{ flexDirection:'row'}}>
-                {/* <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase(), passed: Precision}) }}> */}
                 <Button onPress={() => { Actions.Precision({ passed: Precision }) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center' }}>
                         <Text style={{ color:"red" }}>{Precision[0].category.name.toUpperCase()}</Text>
