@@ -4,10 +4,11 @@ import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import masteries from './masteries';
 import champions from './champions';
+import summoner from './summoner'
 
 
 const reducer = combineReducers({
-  masteries, champions,
+  masteries, champions, summoner
 });
 
 const middleware = composeWithDevTools(applyMiddleware(

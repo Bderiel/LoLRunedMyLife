@@ -7,16 +7,19 @@ import LandingPage from './LandingPage';
 import AllChampions from './AllChampions';
 import SingleChamp from './SingleChamp';
 import Masteries from './Masteries';
+
 import Precision from './Precision';
 import Domination from './Domination';
 import Sorcery from './Sorcery';
 import Resolve from './Resolve';
 import Inspiration from './Inspiration';
+import SearchChamp from './search';
+import MatchHistory from './MatchHistory';
 import styles from '../StyleSheet';
 
 class Main extends Component {
-  componentDidMount(props) {
-    this.props.initialData(props);
+  componentDidMount() {
+    this.props.initialData();
   }
   render() {
     return (
@@ -31,6 +34,8 @@ class Main extends Component {
           <Scene key="Sorcery" component={Sorcery} title='Sorcery' />
           <Scene key="Resolve" component={Resolve} title ='Resolve'/>
           <Scene key="Inspiration" component={Inspiration} title ='Inspiration'/>
+          <Scene key="Search" component={SearchChamp} title='Search Match History' />
+          <Scene key="MatchHistory" component={MatchHistory} />
         </Scene>
       </Router>
     );

@@ -18,3 +18,5 @@ export const fetchMasteries = () => (dispatch) => {
     .then(res => dispatch(getMasteries(res.data)))
     .catch(err => console.log(err));
 };
+
+
