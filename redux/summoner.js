@@ -24,7 +24,7 @@ export const fetchMatches = summoner => (dispatch) => {
     .then((res) => res.data.accountId)
     .then(id => axios.get(`https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/${id}?api_key=${apiKey}`))
     .then(matches => dispatch(getMatches(matches)))
-    .then(() => Actions.MatchHistory())
+    .then(() => Actions.MatchHistory({title:summoner}))
     .catch(err => console.log(err));
 };
 
