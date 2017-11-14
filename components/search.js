@@ -25,7 +25,7 @@ class SearchChamp extends Component {
         />
             <Button onPress={() => {
                 this.props.fetchMatches(this.state.text)
-                 Actions.MatchHistory({ summoner: this.state.text }) 
+                 {/* Actions.MatchHistory({ summoner: this.state.text })  */}
                  
                  }}>Search</Button>
       </View>
