@@ -67,20 +67,16 @@ class Masteries extends Component {
                 </Button>
             </View>
           </View>
-        </ScrollView>
-        );
-    }
+          </ScrollView>
+    );
+  }
 }
 
 const mapProps = state => ({
-    masteries: state.masteries,
+  masteries: state.masteries,
 });
 
 export default connect(mapProps, {})(Masteries);
 
 
-//require(`../public/images${char.image.slice(1)}`)
-
-//Precision[0].category.name
-//require(`../public/images${Precision[0].category.image.slice(1)}`)
 
