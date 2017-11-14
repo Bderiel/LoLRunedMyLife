@@ -6,65 +6,65 @@ import Button from 'react-native-button';
 import styles from '../StyleSheet';
 
 class Masteries extends Component {
-  render() {
-    const toFilter = this.props.masteries;
-    const Precision = toFilter.filter(cat => cat.category.name === 'Precision');
-    const Domination = toFilter.filter(cat => cat.category.name === 'Domination');
-    const Sorcery = toFilter.filter(cat => cat.category.name === 'Sorcery');
-    const Resolve = toFilter.filter(cat => cat.category.name === 'Resolve');
-    const Inspiration = toFilter.filter(cat => cat.category.name === 'Inspiration');
-    return (
-      <ScrollView >
-            <View style={{ flex: 1, flexWrap: 'wrap', alignItems: 'center' }}>
-            <View style={{ flexDirection: 'row' }}>
-              <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase(), passed: Precision }); }}>
-                <View style={{ flexDirection: 'column' }}>
-                            <Text>{Precision[0].category.name.toUpperCase()}</Text>
-                            <Text>{Precision[0].category.description}</Text>
-                          </View>
-                <Image style={{ width: 150, height: 150 }} source={require('../public/images/precision/precisionicon.png')} />
-              </Button>
+    render() {
+        const toFilter = this.props.masteries;
+        const Precision = toFilter.filter(cat => cat.category.name ==='Precision');
+        const Domination = toFilter.filter(cat => cat.category.name === 'Domination');
+        const Sorcery = toFilter.filter(cat => cat.category.name === 'Sorcery');
+        const Resolve = toFilter.filter(cat => cat.category.name === 'Resolve');
+        const Inspiration = toFilter.filter(cat => cat.category.name === 'Inspiration');
+        return (
+        <ScrollView >
+          <View style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase(), passed: Precision}) }}>
+                    <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+                        <Text style={{ color:"red" }}>{Precision[0].category.name.toUpperCase()}</Text>
+                        <Text style={{ color:"grey" }}>Improved Attacks</Text>
+                        <Text style={{ color:"grey" }}>Sustained Damage</Text>
+                    </View>
+                <Image style={{ width: 150, height: 150 }} source={require(`../public/images/precision/precisionicon.png`)}/>
+                </Button>
             </View>
-
-            <View style={{ flexDirection: 'row' }}>
-              <Button onPress={() => { Actions.SingleMastery({ title: Domination[0].category.name.toUpperCase(), passed: Domination }); }}>
-                <View style={{ flexDirection: 'column' }}>
-                            <Text>{Domination[0].category.name.toUpperCase()}</Text>
-                            <Text>{Domination[0].category.description}</Text>
-                          </View>
-                <Image style={{ width: 150, height: 150 }} source={require('../public/images/domination/dominationicon.png')} />
-              </Button>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleMastery({ title: Domination[0].category.name.toUpperCase(), passed: Domination}) }}>
+                    <View style={{ flexDirection: 'column', alignItems: 'center'  }}>
+                        <Text style={{ color:"red" }}>{Domination[0].category.name.toUpperCase()}</Text>
+                        <Text style={{ color:"grey" }}>Burst Damage</Text>
+                        <Text style={{ color:"grey" }}>Target Access</Text>
+                    </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/domination/dominationicon.png`)}/>
+                </Button>
             </View>
-
-            <View style={{ flexDirection: 'row' }}>
-              <Button onPress={() => { Actions.SingleMastery({ title: Sorcery[0].category.name.toUpperCase(), passed: Sorcery }); }}>
-                <View style={{ flexDirection: 'column' }}>
-                            <Text>{Sorcery[0].category.name.toUpperCase()}</Text>
-                            <Text>{Sorcery[0].category.description}</Text>
-                          </View>
-                <Image style={{ width: 150, height: 150 }} source={require('../public/images/sorcery/sorceryicon.png')} />
-              </Button>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleMastery({ title: Sorcery[0].category.name.toUpperCase(), passed: Sorcery}) }}>
+                    <View style={{ flexDirection: 'column', alignItems: 'center'  }}>
+                        <Text style={{ color:"red" }}>{Sorcery[0].category.name.toUpperCase()}</Text>
+                        <Text style={{ color:"grey" }}>Empowered Abilities</Text>
+                        <Text style={{ color:"grey" }}>Resource Manipulation</Text>
+                    </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/sorcery/sorceryicon.png`)}/>
+                </Button>
             </View>
-
-            <View style={{ flexDirection: 'row' }}>
-              <Button onPress={() => { Actions.SingleMastery({ title: Resolve[0].category.name.toUpperCase(), passed: Resolve }); }}>
-                <View style={{ flexDirection: 'column', flexWrap: 'wrap' }}>
-                            <Text>{Resolve[0].category.name.toUpperCase()}</Text>
-                            <Text>{Resolve[0].category.description}</Text>
-                          </View>
-                <Image style={{ width: 150, height: 150 }} source={require('../public/images/resolve/resolveicon.png')} />
-              </Button>
-              <Text>{Resolve[0].category.description}</Text>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleMastery({ title: Resolve[0].category.name.toUpperCase(), passed: Resolve}) }}>
+                    <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+                        <Text style={{ color:"red" }}>{Resolve[0].category.name.toUpperCase()}</Text>
+                        <Text style={{ color:"grey" }}>Durability</Text>
+                        <Text style={{ color:"grey" }}>Crowd Control</Text>
+                    </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/resolve/resolveicon.png`)}/>
+                </Button>
             </View>
-
-            <View style={{ flexDirection: 'row' }}>
-              <Button onPress={() => { Actions.SingleMastery({ title: Inspiration[0].category.name.toUpperCase(), passed: Inspiration }); }}>
-                <View style={{ flexDirection: 'column', flexWrap: 'wrap' }}>
-                            <Text>{Inspiration[0].category.name.toUpperCase()}</Text>
-                            <Text>{Inspiration[0].category.description}</Text>
-                          </View>
-                <Image style={{ width: 150, height: 150 }} source={require('../public/images/inspiration/inspirationicon.png')} />
-              </Button>
+            <View style={{ flexDirection:'row'}}>
+                <Button onPress={() => { Actions.SingleMastery({ title: Inspiration[0].category.name.toUpperCase(), passed: Inspiration}) }}>
+                    <View style={{ flexDirection: 'column', alignItems: 'center'}}>
+                        <Text style={{ color:"red" }}>{Inspiration[0].category.name.toUpperCase()}</Text>
+                        <Text style={{ color:"grey" }}>Creative Tools</Text>
+                        <Text style={{ color:"grey" }}>Rule Bending</Text>
+                    </View>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/inspiration/inspirationicon.png`)}/>
+                </Button>
             </View>
           </View>
           </ScrollView>
@@ -79,8 +79,4 @@ const mapProps = state => ({
 export default connect(mapProps, {})(Masteries);
 
 
-// require(`../public/images${char.image.slice(1)}`)
-
-// Precision[0].category.name
-// require(`../public/images${Precision[0].category.image.slice(1)}`)
 
