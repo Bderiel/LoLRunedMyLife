@@ -1,44 +1,53 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 import styles from '../StyleSheet';
 import { connect } from 'react-redux';
-import { fetchMatches } from '../redux/summoner';
-
-
+import Button from 'react-native-button';
+import { Actions } from 'react-native-router-flux';
 
 
 class MatchHistory extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
-    componentDidMount() {
-           this.props.findPlayer(this.props.summoner)
-    
-    }
-    render() {
-        this.props.matches
-        return (
-            <View>
-                <Text>tet</Text>
-            </View>
-        );
-    }
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const matches = this.props.matches.data.matches;
+    const champs = this.props.champions.data;
+    const keys = Object.keys(champs);
+    const champions = keys.map(character => champs[character]);
+    console.log(champions);
+
+    return (
+          <ScrollView>
+              {matches.map((el) => {
+                    const champ = champions.filter(test => test.key == el.champion)[0];
+
+                    return (
+                      <View>
+                          <Button onPress={() => { Actions.SingleChamp({ chamId: champ.id, champ, title: champ.id }); }}>
+                              <Text>{champ.id}</Text>
+                              <Image
+                                  style={{ width: 75, height: 75, borderRadius: 50 }}
+                                  source={{
+                                        uri: `http://ddragon.leagueoflegends.com/cdn/7.22.1/img/champion/${champ.id}.png`,
+                                    }}
+                                />
+                            </Button>
+                          <Text>Role: {el.lane}</Text>
+                        </View>
+                    );
+                })}
+            </ScrollView>
+    );
+  }
 }
 
 
-
 const mapProps = state => ({
-    champions: state.champions,
-    matches : state.matches
+  champions: state.champions,
+  matches: state.summoner,
 });
 
 
-
-const mapDispatch = dispatch => ({
-    findPlayer: (sum) => {
-        dispatch(fetchMatches(sum));
-    },
-});
-
-export default connect(mapProps, mapDispatch)(MatchHistory)
+export default connect(mapProps, {})(MatchHistory)
+;
