@@ -8,7 +8,7 @@ import AllChampions from './AllChampions';
 import SingleChamp from './SingleChamp';
 import Masteries from './Masteries';
 import SingleMastery from './SingleMastery';
-import SearchChamp from './Search';
+import SearchChamp from './search';
 import MatchHistory from './MatchHistory';
 import styles from '../StyleSheet';
 
