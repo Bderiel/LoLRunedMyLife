@@ -49,5 +49,4 @@ const mapProps = state => ({
 });
 
 
-export default connect(mapProps, {})(MatchHistory)
-;
+export default connect(mapProps, {})(MatchHistory);
