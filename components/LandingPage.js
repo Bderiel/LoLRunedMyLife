@@ -12,6 +12,7 @@ export default class LandingPage extends Component {
         <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', padding: 150}}>
           <Button style={ styles.button } onPress={Actions.AllChampions}>All Champions</Button>
           <Button style={ styles.button } onPress={Actions.Masteries}>LoL Runes Runed My Life</Button>
+          <Button style={styles.button} onPress={Actions.Search}>Match Historys</Button>
         </View>
       </ImageBackground>
     )
