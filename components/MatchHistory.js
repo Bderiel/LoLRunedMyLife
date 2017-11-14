@@ -18,21 +18,20 @@ class MatchHistory extends Component {
     console.log(champions);
 
     return (
-      <ScrollView style={{ backgroundColor: 'black', }}>
+      <ScrollView style={{ backgroundColor: 'black' }}>
         {matches.map((el) => {
                     const champ = champions.filter(test => test.key == el.champion)[0];
-
                     return (
                       <View >
                         <Button onPress={() => { Actions.SingleChamp({ chamId: champ.id, champ, title: champ.id }); }}>
-                            <Text style={{ color: 'red' }}>{champ.id}</Text>
-                            <Image
-                                style={{ width: 75, height: 75, borderRadius: 50 }}
-                                source={{
+                          <Text style={{ color: 'red' }}>{champ.id}</Text>
+                          <Image
+                            style={{ width: 75, height: 75, borderRadius: 50 }}
+                            source={{
                                         uri: `http://ddragon.leagueoflegends.com/cdn/7.22.1/img/champion/${champ.id}.png`,
                                     }}
-                              />
-                          </Button>
+                          />
+                        </Button>
                         <Text style={{ color: 'goldenrod' }}>Role: {el.lane}</Text>
                       </View>
                     );
