@@ -18,9 +18,9 @@ class SearchChamp extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
         <TextInput
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+          style={{ height: 40, backgroundColor: 'white', borderWidth: 1 }}
           onChangeText={text => this.setState({ text })}
         />
             <Button onPress={() => {
