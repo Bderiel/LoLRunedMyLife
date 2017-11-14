@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TextInput } from 'react-native';
-import { connect } from 'react-redux';
 import styles from '../StyleSheet';
 import Button from 'react-native-button';
-import {fetchMatches} from '../redux/summoner';
+import { Actions } from 'react-native-router-flux';
+import { fetchMatches } from '../redux/summoner';
+
+import { connect } from 'react-redux';
 
 
 class SearchChamp extends Component {
@@ -12,33 +14,32 @@ class SearchChamp extends Component {
     this.state = {
       text: '',
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleSubmit() {
-    // e.preventDefault();
-    console.log(this.props);
-    this.props.fetchMatches(this.state.text);
   }
 
   render() {
-    console.log(this.state.text);
     return (
       <View>
         <TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           onChangeText={text => this.setState({ text })}
         />
-        <Button onPress={this.handleSubmit}>Search</Button>
+            <Button onPress={() => {
+                this.props.fetchMatches(this.state.text)
+                 Actions.MatchHistory({ summoner: this.state.text }) 
+                 
+                 }}>Search</Button>
       </View>
     );
   }
 }
 
 const mapProps = state => ({
-  masteries: state.masteries,
-  champions: state.champions,
+    champions: state.champions,
+    matches: state.matches
 });
 
-const mapDispatch = { fetchMatches };
 
-export default connect(mapProps, mapDispatch)(SearchChamp);
+
+const mapDispatch = {fetchMatches}
+
+export default connect(mapProps, mapDispatch)(SearchChamp)
