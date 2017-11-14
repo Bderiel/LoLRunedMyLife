@@ -21,6 +21,7 @@
 		"react-native-button": "^2.1.0",
 		"react-native-elements": "^0.18.2",
 		"react-native-router-flux": "^4.0.0-beta.23",
+		"react-native-search-bar": "^3.0.0",
 		"react-redux": "^5.0.6",
 		"redux": "^3.7.2",
 		"redux-devtools-extension": "^2.13.2",

@@ -8,11 +8,12 @@ import AllChampions from './AllChampions';
 import SingleChamp from './SingleChamp';
 import Masteries from './Masteries';
 import SingleMastery from './SingleMastery';
+import SearchChamp from './Search';
 import styles from '../StyleSheet';
 
 class Main extends Component {
-  componentDidMount(props) {
-    this.props.initialData(props);
+  componentDidMount() {
+    this.props.initialData();
   }
   render() {
     return (
@@ -23,6 +24,7 @@ class Main extends Component {
           <Scene key="SingleChamp" component={SingleChamp} />
           <Scene key="Masteries" component={Masteries} title ='Mastery Trees' />
           <Scene key="SingleMastery" component={SingleMastery} />
+          <Scene key="Search" component={SearchChamp} title='Search Match History' />
         </Scene>
       </Router>
     );
