@@ -17,66 +17,66 @@ class Masteries extends Component {
         <ScrollView >
           <View style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
             <View style={{ flexDirection:'row'}}>
-                <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase(), passed: Precision}) }}>
+                {/* <Button onPress={() => { Actions.SingleMastery({ title: Precision[0].category.name.toUpperCase(), passed: Precision}) }}> */}
+                <Button onPress={() => { Actions.Precision({ passed: Precision }) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center' }}>
                         <Text style={{ color:"red" }}>{Precision[0].category.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Improved Attacks</Text>
                         <Text style={{ color:"grey" }}>Sustained Damage</Text>
                     </View>
-                <Image style={{ width: 150, height: 150 }} source={require(`../public/images/precision/precisionicon.png`)}/>
+                <Image style={{ width: 150, height: 150 }} source={require(`../images/precision/precisionicon.png`)}/>
                 </Button>
             </View>
             <View style={{ flexDirection:'row'}}>
-                <Button onPress={() => { Actions.SingleMastery({ title: Domination[0].category.name.toUpperCase(), passed: Domination}) }}>
+                <Button onPress={() => { Actions.Domination({ passed: Domination}) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center'  }}>
                         <Text style={{ color:"red" }}>{Domination[0].category.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Burst Damage</Text>
                         <Text style={{ color:"grey" }}>Target Access</Text>
                     </View>
-                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/domination/dominationicon.png`)}/>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../images/domination/dominationicon.png`)}/>
                 </Button>
             </View>
             <View style={{ flexDirection:'row'}}>
-                <Button onPress={() => { Actions.SingleMastery({ title: Sorcery[0].category.name.toUpperCase(), passed: Sorcery}) }}>
+                <Button onPress={() => { Actions.Sorcery({ passed: Sorcery}) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center'  }}>
                         <Text style={{ color:"red" }}>{Sorcery[0].category.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Empowered Abilities</Text>
                         <Text style={{ color:"grey" }}>Resource Manipulation</Text>
                     </View>
-                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/sorcery/sorceryicon.png`)}/>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../images/sorcery/sorceryicon.png`)}/>
                 </Button>
             </View>
             <View style={{ flexDirection:'row'}}>
-                <Button onPress={() => { Actions.SingleMastery({ title: Resolve[0].category.name.toUpperCase(), passed: Resolve}) }}>
+                <Button onPress={() => { Actions.Resolve({ passed: Resolve}) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center' }}>
                         <Text style={{ color:"red" }}>{Resolve[0].category.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Durability</Text>
                         <Text style={{ color:"grey" }}>Crowd Control</Text>
                     </View>
-                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/resolve/resolveicon.png`)}/>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../images/resolve/resolveicon.png`)}/>
                 </Button>
             </View>
             <View style={{ flexDirection:'row'}}>
-                <Button onPress={() => { Actions.SingleMastery({ title: Inspiration[0].category.name.toUpperCase(), passed: Inspiration}) }}>
+                <Button onPress={() => { Actions.Inspiration({ passed: Inspiration}) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center'}}>
                         <Text style={{ color:"red" }}>{Inspiration[0].category.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Creative Tools</Text>
                         <Text style={{ color:"grey" }}>Rule Bending</Text>
                     </View>
-                    <Image style={{ width: 150, height: 150 }} source={require(`../public/images/inspiration/inspirationicon.png`)}/>
+                    <Image style={{ width: 150, height: 150 }} source={require(`../images/inspiration/inspirationicon.png`)}/>
                 </Button>
             </View>
           </View>
-          </ScrollView>
-    );
-  }
+        </ScrollView>
+        );
+    }
 }
 
 const mapProps = state => ({
-  masteries: state.masteries,
+    masteries: state.masteries,
 });
 
 export default connect(mapProps, {})(Masteries);
-
 
 
