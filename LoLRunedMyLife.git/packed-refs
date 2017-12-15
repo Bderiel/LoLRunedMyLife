@@ -1,9 +1,0 @@
-# pack-refs with: peeled fully-peeled 
-36e3cbd126de1379bed46a5aa12a248e9aca8a73 refs/heads/QOL-changes
-f5f2248c1e3907daffea44a419e811cf84eeb31b refs/heads/allchamps
-a304953577273f34eb91bea4ed06aec27266ab31 refs/heads/api-test
-fcf74b9d82330698ad5e1d3c90a3e649844ac19f refs/heads/finalstyles
-43a06e3406dbe4cd800c5564ee87ad30d5f46b1d refs/heads/find-player
-366e40c4d66d3ce77568fa1cb18179abb6a9053f refs/heads/format-mastery-page
-ebc35cf71caa417301e2029027eecb651266ffd1 refs/heads/master
-ac4d65ff562d886bd0557a18104e2f51ef809c79 refs/heads/masteries
