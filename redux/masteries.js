@@ -14,9 +14,8 @@ export default function (state = [], action) {
 }
 
 export const fetchMasteries = () => (dispatch) => {
-  axios.get('http://172.16.21.234:8000/api/masteries')
+  axios.get('http://ddragon.leagueoflegends.com/cdn/7.22.1/data/en_US/runesReforged.json')
     .then(res => dispatch(getMasteries(res.data)))
     .catch(err => console.log(err));
 };
-
 
