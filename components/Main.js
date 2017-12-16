@@ -10,7 +10,7 @@ import Masteries from './Masteries';
 import SearchChamp from './search';
 import MatchHistory from './MatchHistory';
 import styles from '../StyleSheet';
-
+import Runes from './Runes'
 class Main extends Component {
   componentDidMount() {
     this.props.initialData();
@@ -25,6 +25,7 @@ class Main extends Component {
           <Scene key="Masteries" component={Masteries} title ='Mastery Trees' />
           <Scene key="Search" component={SearchChamp} title='Search Match History' />
           <Scene key="MatchHistory" component={MatchHistory} />
+          <Scene key="Runes" component={Runes} />
         </Scene>
       </Router>
     );
