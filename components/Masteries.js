@@ -12,13 +12,13 @@ class Masteries extends Component {
             return(
                 <View key={perkStyle.id} style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
             <View style={{ flexDirection:'row'}}>
-                <Button onPress={() => { Actions.Runes({ title:'test'  }) }}>
+                <Button onPress={() => {Actions.Runes({title: perkStyle.name, runes:perkStyle.slots})}}>
                     <View style={{ flexDirection: 'column', alignItems: 'center' }}>
                                 <Text style={{ color: "red" }}>{perkStyle.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Improved Attacks</Text>
                         <Text style={{ color:"grey" }}>Sustained Damage</Text>
                     </View>
-                            <Image style={{ width: 150, height: 150 }} source={{ uri: `http://media.services.zam.com/v1/media/byName/lolking/img/runes/${perkStyle.name.toLowerCase()}/icon.png`}}/>
+                            <Image style={{ width: 200, height: 200 }} source={{ uri: `http://media.services.zam.com/v1/media/byName/lolking/img/runes/${perkStyle.name.toLowerCase()}/icon.png`}}/>
                 </Button>
             </View>
             </View>
