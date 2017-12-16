@@ -9,6 +9,7 @@ import SingleChamp from './SingleChamp';
 import Masteries from './Masteries';
 import SearchChamp from './search';
 import MatchHistory from './MatchHistory';
+import Runes from './Runes';
 import styles from '../StyleSheet';
 
 class Main extends Component {
@@ -24,6 +25,7 @@ class Main extends Component {
           <Scene key="SingleChamp" component={SingleChamp} />
           <Scene key="Masteries" component={Masteries} title ='Mastery Trees' />
           <Scene key="Search" component={SearchChamp} title='Search Match History' />
+          <Scene key="Runes" component={Runes} />
           <Scene key="MatchHistory" component={MatchHistory} />
         </Scene>
       </Router>
