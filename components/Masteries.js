@@ -12,7 +12,7 @@ class Masteries extends Component {
             return(
                 <View key={perkStyle.id} style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
             <View style={{ flexDirection:'row'}}>
-                <Button onPress={() => { Actions.Precision({ passed: Precision }) }}>
+                <Button onPress={() => { Actions.Runes({ title:'test'  }) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center' }}>
                                 <Text style={{ color: "red" }}>{perkStyle.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Improved Attacks</Text>
