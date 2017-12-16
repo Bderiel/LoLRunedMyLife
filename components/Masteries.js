@@ -6,42 +6,33 @@ import Button from 'react-native-button';
 import styles from '../StyleSheet';
 
 class Masteries extends Component {
-    render() {
-        const toFilter = this.props.masteries;
-        const Precision = toFilter.filter(cat => cat.name ==='Precision');
-        const test =Precision[0].id+''
-        // const Domination = toFilter.filter(cat => cat.name === 'Domination');
-        // const Sorcery = toFilter.filter(cat => cat.name === 'Sorcery');
-        // const Resolve = toFilter.filter(cat => cat.name === 'Resolve');
-        // const Inspiration = toFilter.filter(cat => cat.name === 'Inspiration');
-        var icon = Precision.length
-            ? require(`../images/runes/perkStyle/${test}.png`)
-            : require('../images/runes/d.jpg');
-       //var icon = require('../images/runes/d.jpg');
-        return (
-        <ScrollView >
-          <View style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
+  render() {
+    return (
+        <ScrollView >{this.props.masteries.length && this.props.masteries.map(perkStyle=>{
+            return(
+                <View key={perkStyle.id} style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
             <View style={{ flexDirection:'row'}}>
                 <Button onPress={() => { Actions.Precision({ passed: Precision }) }}>
                     <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-                        <Text style={{ color:"red" }}>{Precision[0].name.toUpperCase()}</Text>
+                                <Text style={{ color: "red" }}>{perkStyle.name.toUpperCase()}</Text>
                         <Text style={{ color:"grey" }}>Improved Attacks</Text>
                         <Text style={{ color:"grey" }}>Sustained Damage</Text>
                     </View>
-                            <Image style={{ width: 150, height: 150 }} source={icon}/>
+                            <Image style={{ width: 150, height: 150 }} source={{ uri: `http://media.services.zam.com/v1/media/byName/lolking/img/runes/${perkStyle.name.toLowerCase()}/icon.png`}}/>
                 </Button>
             </View>
             </View>
+            )
+            })}
+          
         </ScrollView>
-        );
-    }
+    );
+  }
 }
 
 
 const mapProps = state => ({
-    masteries: state.masteries,
+  masteries: state.masteries,
 });
 
 export default connect(mapProps, {})(Masteries);
-
-
