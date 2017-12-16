@@ -9,10 +9,15 @@ class Masteries extends Component {
     render() {
         const toFilter = this.props.masteries;
         const Precision = toFilter.filter(cat => cat.name ==='Precision');
+        const test =Precision[0].id+''
         // const Domination = toFilter.filter(cat => cat.name === 'Domination');
         // const Sorcery = toFilter.filter(cat => cat.name === 'Sorcery');
         // const Resolve = toFilter.filter(cat => cat.name === 'Resolve');
         // const Inspiration = toFilter.filter(cat => cat.name === 'Inspiration');
+        var icon = Precision.length
+            ? require(`../images/runes/perkStyle/${test}.png`)
+            : require('../images/runes/d.jpg');
+       //var icon = require('../images/runes/d.jpg');
         return (
         <ScrollView >
           <View style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
@@ -23,7 +28,7 @@ class Masteries extends Component {
                         <Text style={{ color:"grey" }}>Improved Attacks</Text>
                         <Text style={{ color:"grey" }}>Sustained Damage</Text>
                     </View>
-                {/* <Image style={{ width: 150, height: 150 }} source={require(`../images/precision/precisionicon.png`)}/> */}
+                            <Image style={{ width: 150, height: 150 }} source={icon}/>
                 </Button>
             </View>
             </View>
@@ -31,6 +36,7 @@ class Masteries extends Component {
         );
     }
 }
+
 
 const mapProps = state => ({
     masteries: state.masteries,
