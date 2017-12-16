@@ -7,16 +7,10 @@ import LandingPage from './LandingPage';
 import AllChampions from './AllChampions';
 import SingleChamp from './SingleChamp';
 import Masteries from './Masteries';
-
-import Precision from './Precision';
-import Domination from './Domination';
-import Sorcery from './Sorcery';
-import Resolve from './Resolve';
-import Inspiration from './Inspiration';
 import SearchChamp from './search';
 import MatchHistory from './MatchHistory';
 import styles from '../StyleSheet';
-
+import Runes from './Runes'
 class Main extends Component {
   componentDidMount() {
     this.props.initialData();
@@ -29,13 +23,9 @@ class Main extends Component {
           <Scene key="AllChampions" component={AllChampions} title="All Champions" />
           <Scene key="SingleChamp" component={SingleChamp} />
           <Scene key="Masteries" component={Masteries} title ='Mastery Trees' />
-          <Scene key="Precision" component={Precision} title='Precision' />
-          <Scene key="Domination" component={Precision} title='Domination' />
-          <Scene key="Sorcery" component={Sorcery} title='Sorcery' />
-          <Scene key="Resolve" component={Resolve} title ='Resolve'/>
-          <Scene key="Inspiration" component={Inspiration} title ='Inspiration'/>
           <Scene key="Search" component={SearchChamp} title='Search Match History' />
           <Scene key="MatchHistory" component={MatchHistory} />
+          <Scene key="Runes" component={Runes} />
         </Scene>
       </Router>
     );
