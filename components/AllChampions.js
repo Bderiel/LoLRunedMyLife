@@ -18,6 +18,7 @@ class AllChampions extends Component {
               <Button onPress={() => { Actions.SingleChamp({ chamId: char.id, champ:char, title:char.id }) }}>
                 <Image
                   style={{ width: 75, height: 75, borderRadius: 50 }}
+                  defaultSource={require('../images/ring.png')}
                   source={{
                   uri: `http://ddragon.leagueoflegends.com/cdn/7.22.1/img/champion/${char.id}.png`
                 }}/>
