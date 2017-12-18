@@ -18,6 +18,6 @@ export const fetchChampions = () => (dispatch) => {
     .then((res) => {
       dispatch(getChampions(res.data));
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log(err, err.stack));
 };
 

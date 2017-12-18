@@ -4,9 +4,9 @@ import styles from '../StyleSheet';
 import Button from 'react-native-button';
 import { Actions } from 'react-native-router-flux';
 import { fetchMatches } from '../redux/summoner';
-
 import { connect } from 'react-redux';
 
+//what the actual fuck is going on in this component?!
 
 class SearchChamp extends Component {
   constructor() {
