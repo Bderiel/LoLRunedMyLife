@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import styles from '../StyleSheet';
 
 const MatchHistory = (props) => {
-  const matches = props.matches;
+  const { matches } = props;
   const champs = props.champions.data;
   const keys = Object.keys(champs);
   const champions = keys.map(character => champs[character]);
@@ -26,6 +26,7 @@ const MatchHistory = (props) => {
                         }}
               />
             </Button>
+            <Text style={{ color: 'goldenrod' }}>Map: {el.map}</Text>
             <Text style={{ color: 'goldenrod' }}>Role: {el.lane}</Text>
           </View>
         );
