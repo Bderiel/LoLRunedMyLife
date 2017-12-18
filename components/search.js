@@ -18,28 +18,27 @@ class SearchChamp extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', backgroundColor:'black'}}>
+      <View style={{ flex: 1, alignItems: 'center', backgroundColor: 'black' }}>
         <TextInput
           style={{ height: 40, backgroundColor: 'white', borderWidth: 1 }}
           onChangeText={text => this.setState({ text })}
         />
-            <Button onPress={() => {
-                this.props.fetchMatches(this.state.text)
-                 {/* Actions.MatchHistory({ summoner: this.state.text })  */}
-                 
-                 }}>Search</Button>
+        <Button onPress={() => {
+                this.props.fetchMatches(this.state.text);
+                 }}
+            >Search
+            </Button>
       </View>
     );
   }
 }
 
 const mapProps = state => ({
-    champions: state.champions,
-    matches: state.matches
+  champions: state.champions,
+  matches: state.matches,
 });
 
 
+const mapDispatch = { fetchMatches };
 
-const mapDispatch = {fetchMatches}
-
-export default connect(mapProps, mapDispatch)(SearchChamp)
+export default connect(mapProps, mapDispatch)(SearchChamp);

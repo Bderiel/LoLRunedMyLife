@@ -11,7 +11,7 @@ class MatchHistory extends Component {
     super(props);
   }
   render() {
-    const matches = this.props.matches.data.matches;
+    const matches = this.props.matches;
     const champs = this.props.champions.data;
     const keys = Object.keys(champs);
     const champions = keys.map(character => champs[character]);
@@ -44,7 +44,7 @@ class MatchHistory extends Component {
 
 const mapProps = state => ({
   champions: state.champions,
-  matches: state.summoner,
+  matches: state.summoner.matches,
 });
 
 

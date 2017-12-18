@@ -22,7 +22,7 @@ export default class Runes extends Component {
                            <View key={rune.name}style={{ alignItems: 'center', margin: 20 }}>
                                <Text style={{ color: 'red', fontSize: 20 }}>{rune.name}</Text>
                                <Image style={{ width: 100, height: 100 }} source={{
-                                   uri: `http://media.services.zam.com/v1/media/byName/${rune.name}.png?width=50`}} />
+                                   uri: `http://media.services.zam.com/v1/media/byName/${rune.name}.png`}} />
                                <Text style={{ color: 'grey' }}>{rune.shortDesc}</Text>
 
                      </View>

@@ -2,8 +2,6 @@ import axios from 'axios';
 import { Actions } from 'react-native-router-flux';
 
 
-const apiKey = 'RGAPI-36929bb9-94a3-449a-b7b7-f27f6124ee9f';
-
 // https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Acampingburger?api_key=RGAPI-36929bb9-94a3-449a-b7b7-f27f6124ee9f
 
 const GET_MATCHES = 'GET_MATCHES';
@@ -20,11 +18,11 @@ export default function (state = [], action) {
 }
 // summoner= 'Acampingburger'
 export const fetchMatches = summoner => (dispatch) => {
-  axios.get(`https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/${summoner}?api_key=${apiKey}`)
-    .then((res) => res.data.accountId)
-    .then(id => axios.get(`https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/${id}?api_key=${apiKey}`))
-    .then(matches => dispatch(getMatches(matches)))
-    .then(() => Actions.MatchHistory({title:summoner}))
+  axios.get(`http://192.168.29.194:8000/api/champion/${summoner}`)
+    .then((matchHistory) => {
+      console.log(matchHistory.data);
+      return dispatch(getMatches(matchHistory.data));
+    })
+    .then(() => Actions.MatchHistory({ title: summoner }))
     .catch(err => console.log(err));
 };
-
