@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import styles from '../StyleSheet';
 
 const MatchHistory = (props) => {
-  const matches = props.matches.data.matches;
+  const matches = props.matches;
   const champs = props.champions.data;
   const keys = Object.keys(champs);
   const champions = keys.map(character => champs[character]);
@@ -36,7 +36,7 @@ const MatchHistory = (props) => {
 
 const mapProps = state => ({
   champions: state.champions,
-  matches: state.summoner,
+  matches: state.summoner.matches,
 });
 
 export default connect(mapProps, {})(MatchHistory);

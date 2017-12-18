@@ -31,7 +31,9 @@ const Runes = (props) => {
   );
 };
 
+
 export default Runes;
+
 
 Runes.propTypes = {
   runes: PropTypes.arrayOf(PropTypes.any).isRequired,
