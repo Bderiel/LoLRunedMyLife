@@ -17,6 +17,7 @@
 		"morgan": "^1.8.1",
 		"pg": "^6.1.2",
 		"pg-hstore": "^2.3.2",
+		"prop-types": "^15.6.0",
 		"react": "16.0.0",
 		"react-native": "0.50.3",
 		"react-native-button": "^2.1.0",
