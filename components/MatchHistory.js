@@ -36,7 +36,7 @@ const MatchHistory = (props) => {
 
 const mapProps = state => ({
   champions: state.champions,
-  matches: state.summoner.matches,
+  matches: state.summoner,
 });
 
 export default connect(mapProps, {})(MatchHistory);
