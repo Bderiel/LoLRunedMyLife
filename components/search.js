@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TextInput } from 'react-native';
-import styles from '../StyleSheet';
-import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
-import { fetchMatches } from '../redux/summoner';
+import { View, TextInput } from 'react-native';
 import { connect } from 'react-redux';
+import Button from 'react-native-button';
+import styles from '../StyleSheet';
+import { fetchMatches } from '../redux/summoner';
 
-//what the actual fuck is going on in this component?!
 
 class SearchChamp extends Component {
   constructor() {
@@ -18,16 +16,21 @@ class SearchChamp extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', backgroundColor: 'black' }}>
+      <View style={{ flex: 1, backgroundColor: 'black' }}>
         <TextInput
-          style={{ height: 40, backgroundColor: 'white', borderWidth: 1 }}
+          style={styles.TextInputStyleClass}
           onChangeText={text => this.setState({ text })}
         />
-        <Button onPress={() => {
+        <View style={{alignItems: 'center'}}>
+        <Button
+          containerStyle={{ height: 45, overflow: 'hidden', borderRadius: 4, backgroundColor: 'white' }}
+          style={styles.searchButton}
+          onPress={() => {
                 this.props.fetchMatches(this.state.text);
                  }}
-            >Search
-            </Button>
+        >Search
+        </Button>
+          </View>
       </View>
     );
   }
